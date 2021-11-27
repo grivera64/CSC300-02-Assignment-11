@@ -24,10 +24,10 @@ import javafx.stage.Stage;
 
 public class PowersLambda extends Application {
 
-    /* Helper method as using many Exceptions in the long run is slower that iterating through characters */
+    /* Helper method as using many Exceptions in the long run is slower than using regular expressions */
     public static boolean isDouble(String numberString) {
 
-        return numberString.chars().allMatch((c) -> Character.isDigit(c) || c == '.');
+        return numberString.matches("\\d*\\.?\\d*");
 
     }
 
